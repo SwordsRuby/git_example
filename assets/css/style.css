@@ -1,0 +1,533 @@
+/* zeroing */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    transition: all .5s;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+button, a, input[type="submit"] {
+    cursor: pointer;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+body {
+    background: #F4F4F4;
+}
+
+/* zeroing */
+
+
+/* container */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.my_150 {
+    margin-top: 150px;
+}
+
+/* container */
+
+
+/* fonts */
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+.monda {
+    font-family: "Monda", sans-serif;
+}
+
+/* fonts */
+
+
+/* keyframes */
+
+@keyframes baner {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes top {
+    0% {
+        transform: translateY(-130px);
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/* keyframes */
+
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    z-index: 1;
+}
+
+.logo_block {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+.logo_title {
+    font-family: "Monda", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.header_nav {
+    display: flex;
+    gap: 18px;
+}
+
+.nav_el {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.nav_el:hover {
+    transform: scale(105%);
+    text-shadow: white 0px 0px 8px;
+}
+
+.icon_block {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.icon_link:hover {
+    transform: scale(110%) rotateY(360deg);
+}
+
+/* header */
+
+
+/* main */
+
+/* baner_block */
+
+.baner_block {
+    background: url(../media/baner/baner.jpg) fixed no-repeat;
+    background-size: cover;
+    height: 100.1vh;
+    position: relative;
+    top: -61px;
+    z-index: 0;
+    width: 100%;
+}
+
+.baner_subblock {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0, 0.7);
+}
+
+.baner_title {
+    font-family: "Monda", sans-serif;
+    font-size: 90px;
+    font-weight: 400;
+    color: white;
+    animation: baner 2s;
+}
+
+.baner_subtitle {
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+    animation: baner 2s;
+}
+
+.baner_btn {
+    font-size: 20px;
+    font-weight: 400;
+    width: 300px;
+    height: 60px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+    animation: baner 2s;
+}
+
+.baner_btn:hover {
+    backdrop-filter: blur(5px);
+    background: transparent;
+    color: white;
+    font-weight: 500;
+    box-shadow: white 0px 0px 8px;
+}
+
+/* baner_block */
+
+
+/* advantages_block */
+
+.advantages_block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 89px;
+    animation-name: top;
+    animation-duration: 1ms;
+    animation-direction: alternate;
+    animation-timeline: view();
+}
+
+.advantages_cards_subblock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_title {
+    font-family: "Monda", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.advantage {
+    width: 387px;
+    height: 216px;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 20px;
+}
+
+.advantage_subblock {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.advantage_name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.advantage_text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* advantages_block */
+
+
+/* catalog_block */
+
+.catalog_block {
+    display: flex;
+    flex-direction: column;
+    animation-name: top;
+    animation-duration: 1ms;
+    animation-direction: alternate;
+    animation-timeline: view();
+}
+
+.cards_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 387px;
+    height: 427px;
+    background: white;
+    padding: 40px 20px;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+.card_title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card_text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card_price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card_btn {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 9px 54px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.card_btn:hover {
+    box-shadow: #020202 0px 0px 8px;
+    font-weight: 500;
+}
+
+/* catalog_block */
+
+
+/* reviews_block */
+
+.reviews_block {
+    display: flex;
+    flex-direction: column;
+    max-width: 1381px;
+    margin: 150px auto 0 auto;
+    animation-name: top;
+    animation-duration: 1ms;
+    animation-direction: alternate;
+    animation-timeline: view();
+}
+
+.reviews_main_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reviews_subblock {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.review {
+    width: 387px;
+    height: 387px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px 20px;
+}
+
+.review_img_title_subblock {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.review_title_subblock {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.review_name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.review_text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+.btn_review {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: black;
+}
+
+.btn_review:hover {
+    box-shadow: #020202 0px 0px 8px;
+}
+
+.btn_review:hover img {
+    transform: scale(110%);
+}
+
+/* reviews_block */
+
+
+/* form */
+
+.form_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: top;
+    animation-duration: 1ms;
+    animation-direction: alternate;
+    animation-timeline: view();
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_title {
+    font-family: "Monda", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.form_text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.55;
+    max-width: 400px;
+}
+
+.form_input {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #020202;
+    background: transparent;
+    width: 400px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.form_input:focus {
+    font-weight: 600;
+    transform: scale(105%);
+}
+
+.form_input_block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px 0 60px 0;
+}
+
+.form_submit {
+    padding: 18px 111px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    width: 400px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    height: 60px;
+}
+
+.form_submit:hover {
+    box-shadow: #020202 0px 0px 8px;
+    font-weight: 500;
+}
+
+/* form */
+
+/* main */
+
+
+/* footer */
+
+footer {
+    background: black;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.footer_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_subblock {
+    display: flex;
+    gap: 100px;
+    align-items: flex-start;
+}
+
+.footer_nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    position: relative;
+    top: 20px;
+}
+
+.footer_subblock_one {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer_text {
+    width: 200px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    text-align: right;
+    line-height: 1.55;
+}
+
+/* footer */
